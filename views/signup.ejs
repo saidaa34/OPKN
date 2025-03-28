@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <!-- Add favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+<%- include('navigacija.ejs') %>
+
+<div id="sign-up-body">
+    <div class="container">
+        <img id="sign-up-slika" src="../images/cooking-illustration1.png">
+    </div>
+    <div class="container">
+        <h1 id="sign-up-naslov">Registracija</h1>
+        <%if(errors.length > 0) {%>
+        <ul>
+            <%for(let i = 0; i<errors.length; i++) {%>
+            <%console.log(errors[i])%>
+            <li><%=errors[i].message%></li>
+            <%}%>
+        </ul>
+        <%}%>
+        <form id="sign-up-forma" action="/signup/add" method="post">
+            <div>
+                <label for="ime">Ime</label> <br>
+                <input type="text" placeholder="Unesite ime" name="ime" id="ime" autocomplete="off" class="input-polje" required>
+            </div>
+            <div>
+                <label for="prezime">Prezime</label> <br>
+                <input type="text" placeholder="Unesite prezime" name="prezime" id="prezime" autocomplete="off" class="input-polje" required>
+            </div>
+            <div>
+                <label for="email">E-mail</label> <br>
+                <input type="email" placeholder="Unesite e-mail" name="email" id="email" class="input-polje">
+            </div>
+            <div>
+                <label for="password">Lozinka</label> <br>
+                <input type="password" placeholder="Unesite password" name="password" id="password" autocomplete="off" class="input-polje" required>
+            </div>
+            <div>
+                <label for="password2">Molimo potvrdite unesenu lozinku</label> <br>
+                <input type="password" placeholder="Ponovite password" name="password2" id="password2" autocomplete="off" class="input-polje" required>
+            </div>
+            <button type="submit" class="logovanje-dugme">Sign Up</button>
+        </form>
+    </div>
+</div>
+<%- include('footer.ejs') %>
+</body>
+</html>
