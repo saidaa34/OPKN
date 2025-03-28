@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Nunito:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* PALETA */
+/* CSS HEX
+-- cinnabar: #da4825ff;
+-- olivine: #9eae5fff;
+-- pearl: #d0d5bdff;
+-- chamoisee: #9a764bff;
+-- peach: #f7c9a2ff;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d0d5bdff;
+  font-family: 'Lemon', serif;
+  font-size: 1.1vw;
+}
+
+/* NAVIGACIJA */
+.navbar-custom {
+  color: ghostwhite!important;
+  background-color: #9eae5fff!important;
+}
+.navbar-brand {
+  font-size: 2vw;
+}
+
+.dropdown-menu {
+  background-color: #f7c9a2ff;
+  border: none;
+}
+
+.dropdown-item {
+  color: #da4825ff;
+}
+
+.dropdown-item:hover {
+  color: #9a764bff;
+  background-color: #f7c9a2ff;
+}
+
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:30px;
+  font-size: 1vw;
+  vertical-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar-nav > li{
+    font-size: 5vw;
+  }
+  .navbar-brand {
+    font-size: 7vw;
+  }
+
+}
+
+
+/*SIGN UP*/
+#sign-up-body {
+  margin: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  flex: 1;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+/* naslov */
+#sign-up-naslov {
+  font-family: 'Lemon', serif;
+  font-size: 3vw;
+  color: #da4825ff
+}
+
+/* slika */
+#sign-up-slika {
+  margin-left: 10%;
+  vertical-align: middle;
+}
+
+/* forma */
+#sign-up-forma {
+  font-family: 'Varela Round', sans-serif;
+  font-size: large;
+  color: #9a764bff;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.input-polje {
+  margin: 1%;
+  font-size: 1vw;
+  width: 60%;
+  border: none;
+  border-radius: 15px;
+  padding: 2%;
+  color: #9a764bff
+}
+
+.input-polje::placeholder {
+  font-size: 1vw;
+  color: #9eae5fff
+}
+
+.input-polje:focus {
+  border: 1px solid #9eae5fff;
+  box-shadow: 0 0 3px #9eae5fff;
+  outline-offset: 0px;
+  outline: none;
+  font-size: 1vw;
+  color: #9a764bff
+}
+
+.logovanje-dugme {
+  border: none;
+  border-radius: 15px;
+  width: 50%;
+  margin-top: 1%;
+  margin-left: 6%;
+  padding: 2%;
+  font-family: 'Lemon', serif;
+  font-size: 1vw;
+  background-color: #da4825ff;
+  color: #d0d5bdff
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    width: auto;
+    text-align: center;
+  }
+
+  /* naslov */
+  #sign-up-naslov {
+    font-size: 7vw;
+  }
+
+  /* slika */
+  #sign-up-slika {
+    vertical-align: middle;
+    margin-top: 5%;
+    width: 250px;
+  }
+
+  /* forma */
+  #sign-up-forma {
+    font-size: 4vw;
+  }
+
+  .input-polje {
+    width: 80%;
+    margin-top: 3%;
+    font-size: 4vw;
+  }
+
+  .input-polje::placeholder {
+    font-size: 4vw;
+  }
+
+  .input-polje:focus {
+    font-size: 4vw;
+  }
+
+  .logovanje-dugme {
+    width: 80%;
+    font-size: 4vw;
+  }
+
+}
+
+/*LOGIN*/
+.ikonica {
+  vertical-align: middle;
+}
+
+/* DODAJ NOVI RECEPT */
+#dodaj-recept {
+  margin: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+
+.forma-recepti {
+  font-family: 'Varela Round', sans-serif;
+  font-size: large;
+  color: #9a764bff;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.forma-recepti input[type=text] {
+  margin: 1%;
+  font-size: 1vw;
+  width: 30%;
+  border: none;
+  border-radius: 15px;
+  padding: 2%;
+  color: #9a764bff
+}
+.forma-recepti input[type=number] {
+  margin: 1%;
+  font-size: 1vw;
+  width: 30%;
+  border: none;
+  border-radius: 15px;
+  padding: 2%;
+  color: #9a764bff
+}
+
+.forma-recepti input::file-selector-button {
+  border: none;
+  border-radius: 15px;
+  margin: 3%;
+  padding: 3%;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1vw;
+  background-color: #da4825ff;
+  color: #d0d5bdff
+}
+.lajk {
+  border: none;
+  border-radius: 15px;
+  margin: 1%;
+  padding: 2%;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1vw;
+  background-color: #da4825ff;
+  color: #d0d5bdff
+}
+
+.forma-recepti select {
+  margin: 1%;
+  font-size: 1vw;
+  width: 10%;
+  border: none;
+  border-radius: 15px;
+  padding: 2%;
+  color: #9a764bff
+}
+
+.forma-recepti input[type=button] {
+  border: none;
+  border-radius: 15px;
+  margin-left: 70%;
+  margin-top: 2%;
+  padding: 1%;
+  font-family: 'Lemon', serif;
+  font-size: 1vw;
+  background-color: #da4825ff;
+  color: #d0d5bdff
+}
+
+.naziv-recepta {
+  margin: 1%;
+  font-size: 1vw;
+  width: 80%;
+  border: none;
+  border-radius: 15px;
+  padding: 2%;
+  color: #9a764bff
+}
+
+.forma-recepti textarea {
+  margin: 1%;
+  font-size: 1vw;
+  width: 60%;
+  border: none;
+  border-radius: 15px;
+  padding: 2%;
+  color: #9a764bff
+}
+
+.forma-recepti input::placeholder {
+  font-size: 1vw;
+  color: #9eae5fff
+}
+
+.forma-recepti input:focus {
+  border: 1px solid #9eae5fff;
+  box-shadow: 0 0 3px #9eae5fff;
+  outline-offset: 0px;
+  outline: none;
+  font-size: 1vw;
+  color: #9a764bff
+}
+
+.recept-dugme {
+  border: none;
+  border-radius: 15px;
+  margin-top: 1%;
+  padding: 2%;
+  font-family: 'Lemon', serif;
+  font-size: 1vw;
+  background-color: #da4825ff;
+  color: #d0d5bdff
+}
+
+#dodaj-recept-slika {
+  vertical-align: middle;
+  margin: 5%;
+  width: 60%;
+}
+
+/* POČETNA STRANICA */
+.container-kartice {
+  margin-bottom: 3%;
+}
+
+.card-title {
+  color: #da4825ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.naslov {
+  color: #da4825ff;
+  font-size: 3vw;
+  margin: 3%;
+}
+
+.poziv {
+  padding: 5%;
+  background-color: #9eae5fff;
+  font-family: 'Lemon', serif;
+  text-align: center;
+  font-size: 5vw;
+  color: #da4825ff;
+}
+
+.poziv > a {
+  color: #da4825ff;
+}
+
+.poziv > a:hover {
+  color: #9a764bff;
+}
+
+.poziv > h3 {
+  font-family: 'Varela Round', sans-serif;
+  font-style: italic;
+  font-size: 2vw;
+  margin: 3%;
+}
+
+/* FOOTER */
+footer {
+  font-family: 'Varela Round', sans-serif;
+  font-size: large;
+  color: #d0d5bdff;
+  position: relative;
+  width: 100%;
+  background: #da4825ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.social-icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+footer p {
+  margin: auto;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+.odjava-admin {
+  margin: 2%;
+  color: #da4825ff;
+  font-size: large;
+}
+
+.table-responsive {
+  font-family: 'Varela Round', sans-serif;
+  font-size: large;
+  color: #9a764bff!important;
+}
